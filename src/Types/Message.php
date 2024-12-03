@@ -1767,4 +1767,22 @@ class Message extends BaseType implements TypeInterface
     {
         $this->forumTopicReopened = $forumTopicReopened;
     }
+
+    /**
+     * @param ForumTopicCreated $forumTopicEdited
+     * @return void
+     */
+    public function setForumTopicEdited($forumTopicEdited)
+    {
+        $this->forumTopicEdited = $forumTopicEdited;
+    }
+
+    
+    /**
+     * @return ForumTopicEdited|null
+     */
+    public function getForumTopicEdited()
+    {
+        return $this->forumTopicEdited;
+    }
 }
