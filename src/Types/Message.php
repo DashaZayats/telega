@@ -807,6 +807,16 @@ class Message extends BaseType implements TypeInterface
         $this->senderBoostCount = $senderBoostCount;
     }
 
+    public function setBoostAdded($boostAdded)
+    {
+        $this->boostAdded = $boostAdded;
+    }
+
+    public function getBoostAdded($boostAdded)
+    {
+        return $this->boostAdded;
+    }
+    
     /**
      * @return User|null
      */
