@@ -1795,4 +1795,22 @@ class Message extends BaseType implements TypeInterface
     {
         return $this->forumTopicEdited;
     }
+
+    /**
+     * @param MessageAutoDeleteTimerChanged $messageAutoDeleteTimerChanged
+     * @return void
+     */
+    public function setMessageAutoDeleteTimerChanged($messageAutoDeleteTimerChanged)
+    {
+        $this->messageAutoDeleteTimerChanged = $messageAutoDeleteTimerChanged;
+    }
+
+    
+    /**
+     * @return MessageAutoDeleteTimerChanged|null
+     */
+    public function getMessageAutoDeleteTimerChanged()
+    {
+        return $this->messageAutoDeleteTimerChanged;
+    }
 }
