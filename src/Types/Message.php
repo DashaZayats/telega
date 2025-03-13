@@ -1813,4 +1813,39 @@ class Message extends BaseType implements TypeInterface
     {
         return $this->messageAutoDeleteTimerChanged;
     }
+
+    /**
+     * @param VideoChatEnded $videoChatEnded
+     * @return void
+     */
+    public function setVideoChatEnded($videoChatEnded)
+    {
+        $this->videoChatEnded = $videoChatEnded;
+    }
+    
+    /**
+     * @return VideoChatEnded|null
+     */
+    public function getVideoChatEnded()
+    {
+        return $this->videoChatEnded;
+    }
+
+
+    /**
+     * @param VideoChatStarted $videoChatStarted
+     * @return void
+     */
+    public function setVideoChatStarted($videoChatStarted)
+    {
+        $this->videoChatStarted = $videoChatStarted;
+    }
+    
+    /**
+     * @return VideoChatStarted|null
+     */
+    public function getVideoChatStarted()
+    {
+        return $this->videoChatStarted;
+    }
 }
