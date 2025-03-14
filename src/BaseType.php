@@ -51,6 +51,9 @@ abstract class BaseType
         foreach (static::$map as $key => $item) {
             if (isset($data[$key]) && (!is_array($data[$key]) || !empty($data[$key]))) {
                 $method = 'set' . self::toCamelCase($key);
+                if (!method_exists($this, $method)) {
+                    return false;
+                }
                 if ($item === true) {
                     $this->$method($data[$key]);
                 } else {
